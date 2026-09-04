@@ -42,7 +42,7 @@ jobs:
         run: npm install
 
       - name: Windows와 Mac 프로그램 만들기
-        run: ${{ matrix.command }}
+        run: ${{ matrix.command }} -- --publish never
         env:
           CSC_IDENTITY_AUTO_DISCOVERY: "false"
 
